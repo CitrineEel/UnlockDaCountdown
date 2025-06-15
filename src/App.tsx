@@ -79,125 +79,93 @@ const KitsuneScene: React.FC<{ count: number }> = ({ count }) => {
   }, []);
 
   return (
-    <div className="fixed left-8 top-1/2 transform -translate-y-1/2 z-20">
+    <div className="fixed left-6 top-1/2 transform -translate-y-1/2 z-20">
       <div className="relative flex flex-col items-center">
-        {/* Cherry Blossom Tree - Improved */}
-        <div className="relative mb-8">
-          <div className="w-48 h-40 relative">
-            {/* Tree trunk - More realistic */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-6 h-24 bg-gradient-to-t from-amber-900 via-amber-800 to-amber-700 rounded-t-lg shadow-xl">
-              {/* Trunk texture lines */}
-              <div className="absolute top-2 left-1 w-4 h-0.5 bg-amber-950 opacity-30 rounded"></div>
-              <div className="absolute top-6 left-0.5 w-5 h-0.5 bg-amber-950 opacity-30 rounded"></div>
-              <div className="absolute top-10 left-1 w-4 h-0.5 bg-amber-950 opacity-30 rounded"></div>
-              <div className="absolute top-14 left-0.5 w-5 h-0.5 bg-amber-950 opacity-30 rounded"></div>
-              <div className="absolute top-18 left-1 w-4 h-0.5 bg-amber-950 opacity-30 rounded"></div>
-            </div>
+        {/* Cherry Blossom Tree */}
+        <div className="relative mb-6">
+          <div className="w-40 h-32 relative">
+            {/* Tree trunk */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-20 bg-gradient-to-t from-amber-900 to-amber-700 rounded-t-lg shadow-lg"></div>
             
-            {/* Tree branches - More natural */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-              <div className="relative w-36 h-20">
+            {/* Tree branches */}
+            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
+              <div className="relative w-28 h-16">
                 {/* Main branches */}
-                <div className="absolute top-4 left-4 w-16 h-2 bg-gradient-to-r from-amber-800 to-amber-700 rounded-full transform -rotate-12 shadow-lg"></div>
-                <div className="absolute top-4 right-4 w-16 h-2 bg-gradient-to-l from-amber-800 to-amber-700 rounded-full transform rotate-12 shadow-lg"></div>
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-12 h-2 bg-gradient-to-t from-amber-800 to-amber-700 rounded-full shadow-lg"></div>
+                <div className="absolute top-3 left-3 w-12 h-1.5 bg-amber-800 rounded transform -rotate-12 shadow-sm"></div>
+                <div className="absolute top-3 right-3 w-12 h-1.5 bg-amber-800 rounded transform rotate-12 shadow-sm"></div>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-8 h-1.5 bg-amber-800 rounded shadow-sm"></div>
                 
                 {/* Secondary branches */}
-                <div className="absolute top-2 left-8 w-8 h-1.5 bg-amber-700 rounded-full transform -rotate-6 shadow-md"></div>
-                <div className="absolute top-2 right-8 w-8 h-1.5 bg-amber-700 rounded-full transform rotate-6 shadow-md"></div>
-                <div className="absolute top-6 left-12 w-6 h-1 bg-amber-700 rounded-full transform -rotate-20 shadow-md"></div>
-                <div className="absolute top-6 right-12 w-6 h-1 bg-amber-700 rounded-full transform rotate-20 shadow-md"></div>
+                <div className="absolute top-1 left-6 w-6 h-1 bg-amber-700 rounded transform -rotate-6"></div>
+                <div className="absolute top-1 right-6 w-6 h-1 bg-amber-700 rounded transform rotate-6"></div>
                 
-                {/* Cherry blossoms - More abundant and varied */}
-                <div className="absolute -top-3 left-3 w-4 h-4 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
-                <div className="absolute -top-1 left-7 w-3 h-3 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full shadow-md"></div>
-                <div className="absolute top-3 left-6 w-3.5 h-3.5 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
-                <div className="absolute -top-3 right-3 w-4 h-4 bg-gradient-to-bl from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
-                <div className="absolute -top-1 right-7 w-3 h-3 bg-gradient-to-bl from-pink-300 to-pink-400 rounded-full shadow-md"></div>
-                <div className="absolute top-3 right-6 w-3.5 h-3.5 bg-gradient-to-bl from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-b from-pink-200 to-pink-300 rounded-full shadow-lg"></div>
-                <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 translate-x-4 w-3 h-3 bg-gradient-to-b from-pink-300 to-pink-400 rounded-full shadow-md"></div>
-                <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 -translate-x-4 w-3 h-3 bg-gradient-to-b from-pink-300 to-pink-400 rounded-full shadow-md"></div>
-                <div className="absolute top-5 left-5 w-2.5 h-2.5 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full shadow-sm"></div>
-                <div className="absolute top-5 right-5 w-2.5 h-2.5 bg-gradient-to-bl from-pink-100 to-pink-200 rounded-full shadow-sm"></div>
-                <div className="absolute top-1 left-10 w-2 h-2 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full shadow-sm"></div>
-                <div className="absolute top-1 right-10 w-2 h-2 bg-gradient-to-bl from-pink-200 to-pink-300 rounded-full shadow-sm"></div>
-                <div className="absolute top-7 left-9 w-2 h-2 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full shadow-sm"></div>
-                <div className="absolute top-7 right-9 w-2 h-2 bg-gradient-to-bl from-pink-100 to-pink-200 rounded-full shadow-sm"></div>
+                {/* Cherry blossoms - larger and more detailed */}
+                <div className="absolute -top-2 left-2 w-3 h-3 bg-pink-300 rounded-full shadow-sm"></div>
+                <div className="absolute top-2 left-5 w-2.5 h-2.5 bg-pink-200 rounded-full shadow-sm"></div>
+                <div className="absolute -top-2 right-2 w-3 h-3 bg-pink-300 rounded-full shadow-sm"></div>
+                <div className="absolute top-2 right-5 w-2.5 h-2.5 bg-pink-200 rounded-full shadow-sm"></div>
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-pink-300 rounded-full shadow-sm"></div>
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 translate-x-3 w-2.5 h-2.5 bg-pink-200 rounded-full shadow-sm"></div>
+                <div className="absolute top-1 left-1/2 transform -translate-x-1/2 -translate-x-3 w-2.5 h-2.5 bg-pink-200 rounded-full shadow-sm"></div>
+                <div className="absolute top-4 left-4 w-2 h-2 bg-pink-100 rounded-full shadow-sm"></div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-pink-100 rounded-full shadow-sm"></div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Kitsune Fox - Completely redesigned */}
-        <div className="relative mb-8">
-          <div className="w-24 h-24 relative">
-            {/* Fox body - More proportional */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-14 h-12 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-500 rounded-full shadow-xl">
-              {/* Body shading */}
-              <div className="absolute top-2 left-2 w-10 h-2 bg-orange-200 rounded-full opacity-60"></div>
+        {/* Kitsune Fox - Enhanced */}
+        <div className="relative mb-6">
+          <div className="w-20 h-20 relative">
+            {/* Fox body */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-12 h-10 bg-gradient-to-b from-orange-300 to-orange-500 rounded-full shadow-lg"></div>
+            
+            {/* Fox head */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-gradient-to-b from-orange-200 to-orange-400 rounded-full shadow-lg"></div>
+            
+            {/* Fox snout */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-4 h-3 bg-gradient-to-b from-orange-100 to-orange-300 rounded-full"></div>
+            
+            {/* Fox ears */}
+            <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 -translate-x-3">
+              <div className="w-4 h-5 bg-gradient-to-b from-orange-300 to-orange-500 rounded-t-full transform rotate-12 shadow-md"></div>
+              <div className="absolute top-1 left-1 w-2 h-3 bg-pink-200 rounded-t-full"></div>
+            </div>
+            <div className="absolute bottom-15 left-1/2 transform -translate-x-1/2 translate-x-3">
+              <div className="w-4 h-5 bg-gradient-to-b from-orange-300 to-orange-500 rounded-t-full transform -rotate-12 shadow-md"></div>
+              <div className="absolute top-1 left-1 w-2 h-3 bg-pink-200 rounded-t-full"></div>
             </div>
             
-            {/* Fox head - Better proportions */}
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-b from-orange-200 via-orange-300 to-orange-400 rounded-full shadow-xl">
-              {/* Head shading */}
-              <div className="absolute top-2 left-2 w-8 h-2 bg-orange-100 rounded-full opacity-70"></div>
-            </div>
+            {/* Fox eyes */}
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 -translate-x-1.5 w-1.5 h-1.5 bg-black rounded-full"></div>
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 translate-x-1.5 w-1.5 h-1.5 bg-black rounded-full"></div>
             
-            {/* Fox snout - More defined */}
-            <div className="absolute bottom-7 left-1/2 transform -translate-x-1/2 w-5 h-4 bg-gradient-to-b from-orange-100 via-orange-200 to-orange-300 rounded-full shadow-md">
-              <div className="absolute top-1 left-1 w-3 h-1 bg-white rounded-full opacity-80"></div>
-            </div>
+            {/* Fox nose */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-black rounded-full"></div>
             
-            {/* Fox ears - More fox-like */}
-            <div className="absolute bottom-18 left-1/2 transform -translate-x-1/2 -translate-x-4">
-              <div className="w-5 h-6 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-500 rounded-t-full transform rotate-12 shadow-lg">
-                <div className="absolute top-1 left-1 w-3 h-4 bg-gradient-to-b from-pink-200 to-pink-300 rounded-t-full"></div>
-              </div>
-            </div>
-            <div className="absolute bottom-18 left-1/2 transform -translate-x-1/2 translate-x-4">
-              <div className="w-5 h-6 bg-gradient-to-b from-orange-300 via-orange-400 to-orange-500 rounded-t-full transform -rotate-12 shadow-lg">
-                <div className="absolute top-1 left-1 w-3 h-4 bg-gradient-to-b from-pink-200 to-pink-300 rounded-t-full"></div>
-              </div>
-            </div>
+            {/* Fox mouth */}
+            <div className="absolute bottom-7 left-1/2 transform -translate-x-1/2 w-2 h-0.5 border-b-2 border-black rounded-full"></div>
             
-            {/* Fox eyes - More expressive */}
-            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 -translate-x-2 w-2 h-2 bg-black rounded-full shadow-sm">
-              <div className="absolute top-0 left-0.5 w-0.5 h-0.5 bg-white rounded-full"></div>
-            </div>
-            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-x-2 w-2 h-2 bg-black rounded-full shadow-sm">
-              <div className="absolute top-0 left-0.5 w-0.5 h-0.5 bg-white rounded-full"></div>
-            </div>
+            {/* Fox tail - Enhanced */}
+            <div className="absolute bottom-2 right-0 w-8 h-6 bg-gradient-to-r from-orange-300 to-orange-500 rounded-full transform rotate-45 shadow-lg"></div>
+            <div className="absolute bottom-1 right-1 w-3 h-3 bg-white rounded-full shadow-sm"></div>
             
-            {/* Fox nose - More detailed */}
-            <div className="absolute bottom-9 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-black rounded-full shadow-sm"></div>
-            
-            {/* Fox mouth - Subtle smile */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 -translate-x-1 w-1 h-0.5 border-b-2 border-black rounded-full"></div>
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-x-1 w-1 h-0.5 border-b-2 border-black rounded-full"></div>
-            
-            {/* Fox tail - More majestic */}
-            <div className="absolute bottom-3 right-0 w-10 h-8 bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500 rounded-full transform rotate-45 shadow-xl">
-              <div className="absolute top-1 right-1 w-4 h-4 bg-gradient-to-br from-white to-orange-100 rounded-full shadow-md"></div>
-              <div className="absolute bottom-1 left-1 w-3 h-3 bg-orange-200 rounded-full opacity-60"></div>
-            </div>
-            
-            {/* Fox paws - More visible */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-x-3 w-2.5 h-2.5 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full shadow-md"></div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-x-3 w-2.5 h-2.5 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full shadow-md"></div>
+            {/* Fox paws */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-x-2 w-2 h-2 bg-orange-400 rounded-full"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-x-2 w-2 h-2 bg-orange-400 rounded-full"></div>
           </div>
         </div>
 
-        {/* Thought bubble - Improved positioning */}
+        {/* Thought bubble */}
         <div className="relative">
-          <div className="bg-white/95 backdrop-blur-sm text-gray-800 px-6 py-4 rounded-2xl shadow-2xl max-w-xs text-sm font-medium relative border border-white/50">
+          <div className="bg-white/95 backdrop-blur-sm text-gray-800 px-5 py-3 rounded-2xl shadow-xl max-w-xs text-sm font-medium relative border border-white/50">
             {getThought(count)}
             {/* Bubble tail */}
-            <div className="absolute -bottom-2 left-12 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white/95"></div>
+            <div className="absolute -bottom-2 left-10 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white/95"></div>
           </div>
           {/* Small bubbles */}
-          <div className="absolute -bottom-4 left-10 w-2 h-2 bg-white/80 rounded-full shadow-sm"></div>
-          <div className="absolute -bottom-6 left-8 w-1 h-1 bg-white/60 rounded-full shadow-sm"></div>
+          <div className="absolute -bottom-4 left-8 w-2 h-2 bg-white/80 rounded-full shadow-sm"></div>
+          <div className="absolute -bottom-6 left-6 w-1 h-1 bg-white/60 rounded-full shadow-sm"></div>
         </div>
       </div>
     </div>
@@ -206,7 +174,7 @@ const KitsuneScene: React.FC<{ count: number }> = ({ count }) => {
 
 const JapaneseShrine: React.FC<{ contributionsLeft: number }> = ({ contributionsLeft }) => {
   return (
-    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-20">
+    <div className="fixed right-6 top-1/2 transform -translate-y-1/2 z-20">
       <div className="bg-gradient-to-b from-red-700 to-red-900 rounded-xl shadow-2xl border-4 border-yellow-600 p-6 min-w-[160px] relative">
         {/* Shrine roof - Multi-layered */}
         <div className="relative mb-4 -mx-2">
